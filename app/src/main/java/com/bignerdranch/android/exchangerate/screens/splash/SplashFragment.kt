@@ -5,14 +5,30 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.bignerdranch.android.exchangerate.APP
 import com.bignerdranch.android.exchangerate.R
+import com.bignerdranch.android.exchangerate.databinding.FragmentSplashBinding
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 class SplashFragment : Fragment() {
+    private lateinit var binding: FragmentSplashBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_splash, container, false)
+    ): View {
+        binding = FragmentSplashBinding.inflate(inflater)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        CoroutineScope(Dispatchers.Main).launch {
+            delay(1500)
+            APP.navController.navigate(R.id.action_splashFragment_to_mainFragment)
+        }
     }
 }

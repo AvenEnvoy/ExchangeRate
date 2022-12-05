@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bignerdranch.android.exchangerate.R
 import com.bignerdranch.android.exchangerate.databinding.ItemBinding
+import com.bignerdranch.android.exchangerate.model.ValCurs
 import com.bignerdranch.android.exchangerate.model.Valute
 
 class MainAdapter: RecyclerView.Adapter<MainAdapter.MainViewHolder>() {
