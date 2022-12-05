@@ -1,5 +1,5 @@
 package com.bignerdranch.android.exchangerate.model
 
-data class Data(
-    val USDRUB: String
+data class ValCurs(
+    val Valute: List<Valute>
 )
