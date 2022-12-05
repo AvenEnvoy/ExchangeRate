@@ -1,10 +1,9 @@
 package com.bignerdranch.android.exchangerate.data
 
-import com.bignerdranch.android.exchangerate.model.ValCurs
-import retrofit2.Response
+import com.bignerdranch.android.exchangerate.model.InputData
 
 class Repository {
-    suspend fun getData(): Response<ValCurs> {
+    suspend fun getData(): InputData {
         return RetrofitInstance.api.getData()
     }
 }

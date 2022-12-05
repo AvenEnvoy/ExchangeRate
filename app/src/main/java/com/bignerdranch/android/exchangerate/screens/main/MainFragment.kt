@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bignerdranch.android.exchangerate.adapters.MainAdapter
 import com.bignerdranch.android.exchangerate.databinding.FragmentMainBinding
+import com.bignerdranch.android.exchangerate.model.ValCurs
 
 class MainFragment : Fragment() {
     private lateinit var binding: FragmentMainBinding
@@ -37,10 +38,8 @@ class MainFragment : Fragment() {
         adapter = MainAdapter()
         rv.adapter = adapter
         viewModel.getDataList()
-        viewModel.valuteList.observe(viewLifecycleOwner, Observer {
-            it.body()?.let { it1 -> adapter.setList(it1) }
+        viewModel.inputData.observe(viewLifecycleOwner, Observer {
+            adapter.setList(it)
         })
-
-
     }
 }

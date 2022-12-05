@@ -5,18 +5,18 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.bignerdranch.android.exchangerate.data.Repository
-import com.bignerdranch.android.exchangerate.model.ValCurs
+import com.bignerdranch.android.exchangerate.model.InputData
 import kotlinx.coroutines.launch
 import retrofit2.Response
 
 class MainViewModel(application: Application): AndroidViewModel(Application()) {
     var context = application
-    var repo = Repository()
-    val valuteList: MutableLiveData<Response<ValCurs>> = MutableLiveData()
+    private var repo = Repository()
+    val inputData: MutableLiveData<InputData> = MutableLiveData()
 
     fun getDataList() {
         viewModelScope.launch {
-            valuteList.value = repo.getData()
+            inputData.value = repo.getData()
         }
     }
 }

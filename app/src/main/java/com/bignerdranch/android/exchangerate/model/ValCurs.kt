@@ -1,3 +1,7 @@
 package com.bignerdranch.android.exchangerate.model
 
-class ValCurs: ArrayList<Valute>()
+data class ValCurs(
+    val Valute: List<Valute>,
+    val _Date: String,
+    val _name: String
+)
