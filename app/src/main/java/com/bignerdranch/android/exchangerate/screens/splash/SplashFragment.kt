@@ -5,9 +5,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.viewmodel.compose.viewModel
 import com.bignerdranch.android.exchangerate.APP
 import com.bignerdranch.android.exchangerate.R
 import com.bignerdranch.android.exchangerate.databinding.FragmentSplashBinding
+import com.bignerdranch.android.exchangerate.screens.main.MainViewModel
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
@@ -26,9 +29,11 @@ class SplashFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        CoroutineScope(Dispatchers.Main).launch {
+        val viewModel = ViewModelProvider(this)[SplashViewModel::class.java]
+        viewModel.getData()
+        /*CoroutineScope(Dispatchers.Main).launch {
             delay(1500)
             APP.navController.navigate(R.id.action_splashFragment_to_mainFragment)
-        }
+        }*/
     }
 }

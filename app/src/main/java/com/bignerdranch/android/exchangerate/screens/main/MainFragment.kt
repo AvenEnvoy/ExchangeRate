@@ -37,7 +37,5 @@ class MainFragment : Fragment() {
             LinearLayoutManager(viewModel.context, LinearLayoutManager.VERTICAL, false)
         adapter = MainAdapter()
         rv.adapter = adapter
-        viewModel.getDataList()
-        adapter.setList(viewModel.inputData.ValCurs.Valute)
     }
 }

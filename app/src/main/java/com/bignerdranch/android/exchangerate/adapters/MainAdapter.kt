@@ -7,14 +7,14 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bignerdranch.android.exchangerate.R
 import com.bignerdranch.android.exchangerate.databinding.ItemBinding
-import com.bignerdranch.android.exchangerate.model.Valute
+import com.bignerdranch.android.exchangerate.model.InputData
 
 class MainAdapter: RecyclerView.Adapter<MainAdapter.MainViewHolder>() {
-    var listMain = emptyList<Valute>()
+    var listMain = emptyList<InputData>()
 
     class MainViewHolder(view: View): RecyclerView.ViewHolder(view){
         private val binding = ItemBinding.bind(view)
-        fun bind(value: Valute) {
+        fun bind(value: InputData) {
             binding.apply {
                 tvCurrency.text = value.CharCode
                 tvValue.text = value.Value
@@ -36,7 +36,7 @@ class MainAdapter: RecyclerView.Adapter<MainAdapter.MainViewHolder>() {
     }
 
     @SuppressLint("NotifyDataSetChanged")
-    fun setList(list: List<Valute>) {
+    fun setList(list: List<InputData>) {
         listMain = list
         notifyDataSetChanged()
     }
