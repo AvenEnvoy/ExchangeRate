@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.bignerdranch.android.exchangerate.APP
@@ -31,9 +32,11 @@ class SplashFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val viewModel = ViewModelProvider(this)[SplashViewModel::class.java]
         viewModel.getData()
-        /*CoroutineScope(Dispatchers.Main).launch {
+        CoroutineScope(Dispatchers.Main).launch {
             delay(1500)
+            val bundle = Bundle()
+            bundle.putSerializable("data", viewModel.data)
             APP.navController.navigate(R.id.action_splashFragment_to_mainFragment)
-        }*/
+        }
     }
 }
