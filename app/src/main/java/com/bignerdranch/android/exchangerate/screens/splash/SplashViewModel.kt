@@ -13,7 +13,7 @@ import org.jsoup.select.Elements
 
 class SplashViewModel(application: Application): AndroidViewModel(Application())  {
     val context = application
-    var data: MutableList<InputData> = mutableListOf()
+    var data: ArrayList<InputData> = ArrayList()
 
     fun getData() {
         try {

@@ -31,7 +31,9 @@ class SplashFragment : Fragment() {
         viewModel.getData()
         CoroutineScope(Dispatchers.Main).launch {
             delay(1500)
-            APP.navController.navigate(R.id.action_splashFragment_to_mainFragment)
+            val bundle = Bundle()
+            bundle.putParcelableArrayList("list", viewModel.data)
+            APP.navController.navigate(R.id.action_splashFragment_to_mainFragment, bundle)
         }
     }
 }
