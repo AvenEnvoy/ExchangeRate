@@ -5,19 +5,23 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bignerdranch.android.exchangerate.APP
 import com.bignerdranch.android.exchangerate.R
 import com.bignerdranch.android.exchangerate.databinding.ItemBinding
 import com.bignerdranch.android.exchangerate.model.InputData
 
 class MainAdapter: RecyclerView.Adapter<MainAdapter.MainViewHolder>() {
-    var listMain = emptyList<InputData>()
+    private var listMain = emptyList<InputData>()
 
     class MainViewHolder(view: View): RecyclerView.ViewHolder(view){
         private val binding = ItemBinding.bind(view)
+        @SuppressLint("DiscouragedApi")
         fun bind(value: InputData) {
             binding.apply {
                 tvCurrency.text = value.CharCode
-                tvValue.text = value.Value
+                tvValue.text = String.format("%.3f", (value.Value / value.Nominal)).toDouble().toString()
+                val id = APP.resources.getIdentifier(value.CharCode.lowercase(), "drawable", APP.packageName)
+                ivCurrency.setImageResource(id)
             }
         }
     }

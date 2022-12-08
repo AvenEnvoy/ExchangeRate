@@ -12,8 +12,8 @@ import org.jsoup.nodes.Element
 import org.jsoup.select.Elements
 
 class SplashViewModel(application: Application): AndroidViewModel(Application())  {
-    val context = application
     var data: ArrayList<InputData> = ArrayList()
+    val context = application
 
     fun getData() {
         try {
@@ -24,8 +24,8 @@ class SplashViewModel(application: Application): AndroidViewModel(Application())
                 for (i in 0 until value.children().size) {
                     data.add(InputData(
                         value.children()[i].child(1).text(),
-                        value.children()[i].child(2).text(),
-                        value.children()[i].child(4).text()))
+                        value.children()[i].child(2).text().toInt(),
+                        value.children()[i].child(4).text().replace(",", ".").toFloat()))
                 }
             }
         } catch (ex: java.lang.Exception) {

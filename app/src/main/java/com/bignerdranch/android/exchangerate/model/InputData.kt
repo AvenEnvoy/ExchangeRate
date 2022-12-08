@@ -6,6 +6,6 @@ import kotlinx.android.parcel.Parcelize
 @Parcelize
 data class InputData(
     val CharCode: String,
-    val Nominal: String,
-    val Value: String
+    val Nominal: Int,
+    val Value: Float
 ): Parcelable
