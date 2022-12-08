@@ -13,23 +13,19 @@ import org.jsoup.select.Elements
 
 class SplashViewModel(application: Application): AndroidViewModel(Application())  {
     val context = application
-    var data: MutableLiveData<InputData> = MutableLiveData<InputData>()
-    lateinit var table: Elements
-    lateinit var value: Element
-    private lateinit var doc: org.jsoup.nodes.Document
+    var data: MutableList<InputData> = mutableListOf()
 
     fun getData() {
         try {
             viewModelScope.launch(Dispatchers.IO) {
-                doc = Jsoup.connect("https://www.cbr.ru/scripts/XML_daily.asp?").get()
-                table = doc.getElementsByTag("ValCurs")
-                value = table[0]
+                val doc = Jsoup.connect("https://www.cbr.ru/scripts/XML_daily.asp?").get()
+                val table = doc.getElementsByTag("ValCurs")
+                val value = table[0]
                 for (i in 0 until value.children().size) {
-                    data.postValue(InputData(
+                    data.add(InputData(
                         value.children()[i].child(1).text(),
                         value.children()[i].child(2).text(),
                         value.children()[i].child(4).text()))
-                    println("${value.children()[i].child(4).text()}")
                 }
             }
         } catch (ex: java.lang.Exception) {
