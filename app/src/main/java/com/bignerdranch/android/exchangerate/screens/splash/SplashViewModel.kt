@@ -26,10 +26,10 @@ class SplashViewModel(application: Application): AndroidViewModel(Application())
                 value = table[0]
                 for (i in 0 until value.children().size) {
                     data.postValue(InputData(
-                        value.children()[i].child(1).toString(),
-                        value.children()[i].child(3).toString(),
-                        value.children()[i].child(4).toString()))
-                    println("${value.children()[i].child(1)}")
+                        value.children()[i].child(1).text(),
+                        value.children()[i].child(2).text(),
+                        value.children()[i].child(4).text()))
+                    println("${value.children()[i].child(4).text()}")
                 }
             }
         } catch (ex: java.lang.Exception) {
