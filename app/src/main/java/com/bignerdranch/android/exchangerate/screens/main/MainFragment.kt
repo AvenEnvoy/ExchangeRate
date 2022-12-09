@@ -15,9 +15,9 @@ import com.bignerdranch.android.exchangerate.model.InputData
 
 class MainFragment : Fragment() {
     private lateinit var binding: FragmentMainBinding
-    lateinit var rv: RecyclerView
-    lateinit var adapter: MainAdapter
-    lateinit var currentData: ArrayList<InputData>
+    private lateinit var rv: RecyclerView
+    private lateinit var adapter: MainAdapter
+    private lateinit var currentData: ArrayList<InputData>
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

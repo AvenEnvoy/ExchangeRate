@@ -1,0 +1,59 @@
+<vector android:height="30dp" android:viewportHeight="15"
+    android:viewportWidth="21" android:width="42dp"
+    xmlns:aapt="http://schemas.android.com/aapt" xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillType="evenOdd" android:pathData="M0,0h21v15H0z">
+        <aapt:attr name="android:fillColor">
+            <gradient android:endX="10.5" android:endY="15"
+                android:startX="10.5" android:startY="0" android:type="linear">
+                <item android:color="#FFFFFFFF" android:offset="0"/>
+                <item android:color="#FFF0F0F0" android:offset="1"/>
+            </gradient>
+        </aapt:attr>
+    </path>
+    <path android:fillType="evenOdd" android:pathData="M0,0h21v15H0z">
+        <aapt:attr name="android:fillColor">
+            <gradient android:endX="10.5" android:endY="15"
+                android:startX="10.5" android:startY="0" android:type="linear">
+                <item android:color="#FF0A17A7" android:offset="0"/>
+                <item android:color="#FF030E88" android:offset="1"/>
+            </gradient>
+        </aapt:attr>
+    </path>
+    <path android:fillType="nonZero" android:pathData="M3,3.23L-1.352,-0.5H0.66L4.16,2h0.697L9.5,-0.902V0.25c0,0.303 -0.167,0.627 -0.418,0.806L6,3.257v0.513l3.137,2.69c0.462,0.395 0.204,1.04 -0.387,1.04 -0.245,0 -0.545,-0.096 -0.75,-0.242L4.84,5h-0.697L-0.5,7.902v-1.66l3.5,-2.5V3.23z">
+        <aapt:attr name="android:fillColor">
+            <gradient android:endX="4.123" android:endY="7.902"
+                android:startX="4.123" android:startY="-0.902" android:type="linear">
+                <item android:color="#FFFFFFFF" android:offset="0"/>
+                <item android:color="#FFF0F0F0" android:offset="1"/>
+            </gradient>
+        </aapt:attr>
+    </path>
+    <path android:fillType="evenOdd" android:pathData="M3.5,3L0,0h0.5L4,2.5h1L9,0v0.25a0.537,0.537 0,0 1,-0.208 0.399L5.5,3v1l3.312,2.839c0.104,0.089 0.072,0.161 -0.062,0.161a0.898,0.898 0,0 1,-0.458 -0.149L5,4.5H4L0,7v-0.5L3.5,4V3z">
+        <aapt:attr name="android:fillColor">
+            <gradient android:endX="4.5" android:endY="7"
+                android:startX="4.5" android:startY="0" android:type="linear">
+                <item android:color="#FFDB1E36" android:offset="0"/>
+                <item android:color="#FFD51931" android:offset="1"/>
+            </gradient>
+        </aapt:attr>
+    </path>
+    <path android:fillType="evenOdd" android:pathData="M0,2.5v2h3.5v2.505c0,0.273 0.214,0.495 0.505,0.495h0.99a0.496,0.496 0,0 0,0.505 -0.495V4.5h3.51a0.49,0.49 0,0 0,0.49 -0.505v-0.99a0.495,0.495 0,0 0,-0.49 -0.505H5.5V0h-2v2.5H0z">
+        <aapt:attr name="android:fillColor">
+            <gradient android:endX="4.751" android:endY="7.502"
+                android:startX="4.751" android:startY="0" android:type="linear">
+                <item android:color="#FFFFFFFF" android:offset="0"/>
+                <item android:color="#FFF0F0F0" android:offset="1"/>
+            </gradient>
+        </aapt:attr>
+    </path>
+    <path android:fillType="evenOdd" android:pathData="M0,3h4V0h1v3h4v1H5v3H4V4H0z">
+        <aapt:attr name="android:fillColor">
+            <gradient android:endX="4.5" android:endY="7"
+                android:startX="4.5" android:startY="0" android:type="linear">
+                <item android:color="#FFDB1E36" android:offset="0"/>
+                <item android:color="#FFD51931" android:offset="1"/>
+            </gradient>
+        </aapt:attr>
+    </path>
+    <path android:fillColor="#FFF" android:fillType="evenOdd" android:pathData="M4.5,12.25l-0.882,0.464 0.169,-0.982 -0.714,-0.696 0.986,-0.143L4.5,10l0.44,0.893 0.987,0.143 -0.714,0.696 0.169,0.982zM15,13l-0.707,0.207 0.207,-0.707 -0.207,-0.707L15,12l0.707,-0.207 -0.207,0.707 0.207,0.707zM15,3.5l-0.707,0.207L14.5,3l-0.207,-0.707L15,2.5l0.707,-0.207L15.5,3l0.207,0.707zM18,6.5l-0.707,0.207L17.5,6l-0.207,-0.707L18,5.5l0.707,-0.207L18.5,6l0.207,0.707zM12,7.5l-0.707,0.207L11.5,7l-0.207,-0.707L12,6.5l0.707,-0.207L12.5,7l0.207,0.707zM16.5,8.75l-0.354,0.104 0.104,-0.354 -0.104,-0.354 0.354,0.104 0.354,-0.104 -0.104,0.354 0.104,0.354z"/>
+</vector>
