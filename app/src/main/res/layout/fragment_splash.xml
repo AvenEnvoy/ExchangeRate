@@ -10,7 +10,7 @@
         android:layout_height="match_parent"
         android:gravity="center"
         android:textSize="40sp"
-        android:textColor="#DE8004"
+        android:textColor="@color/light_blue"
         android:textStyle="bold"
         android:text="@string/splash" />
 
