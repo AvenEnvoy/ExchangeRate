@@ -20,7 +20,7 @@ class MainAdapter: RecyclerView.Adapter<MainAdapter.MainViewHolder>() {
             binding.apply {
                 tvCurrency.text = value.CharCode
                 tvValue.text = String.format("%.3f", (value.Value / value.Nominal)).toDouble().toString()
-                val id = APP.resources.getIdentifier(value.CharCode.lowercase(), "drawable", APP.packageName)
+                val id = APP.resources.getIdentifier("r_${value.CharCode.lowercase()}", "drawable", APP.packageName)
                 ivCurrency.setImageResource(id)
             }
         }
