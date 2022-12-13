@@ -13,6 +13,7 @@ import org.jsoup.select.Elements
 
 class SplashViewModel(application: Application): AndroidViewModel(Application())  {
     var data: ArrayList<InputData> = ArrayList()
+    var date: String = ""
     val context = application
 
     fun getData() {
@@ -21,6 +22,7 @@ class SplashViewModel(application: Application): AndroidViewModel(Application())
                 val doc = Jsoup.connect("https://www.cbr.ru/scripts/XML_daily.asp?").get()
                 val table = doc.getElementsByTag("ValCurs")
                 val value = table[0]
+                date = value.attr("Date")
                 for (i in 0 until value.children().size) {
                     data.add(InputData(
                         value.children()[i].child(1).text(),

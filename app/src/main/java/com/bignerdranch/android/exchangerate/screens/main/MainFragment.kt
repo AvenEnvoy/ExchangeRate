@@ -19,6 +19,7 @@ class MainFragment : Fragment() {
     private lateinit var rv: RecyclerView
     private lateinit var adapter: MainAdapter
     private lateinit var currentData: ArrayList<InputData>
+    private lateinit var currentDate: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,6 +32,7 @@ class MainFragment : Fragment() {
     ): View? {
         binding = FragmentMainBinding.inflate(inflater)
         currentData = arguments?.getParcelableArrayList<InputData>("list") as ArrayList<InputData>
+        currentDate = arguments?.getString("date") as String
         return binding.root
     }
 
@@ -40,6 +42,7 @@ class MainFragment : Fragment() {
     }
 
     private fun init() {
+        (activity as AppCompatActivity).supportActionBar?.title = "Курс валют на $currentDate"
         val viewModel = ViewModelProvider(this)[MainViewModel::class.java]
         rv = binding.rvMain
         rv.layoutManager =

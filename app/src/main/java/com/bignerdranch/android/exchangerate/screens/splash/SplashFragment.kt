@@ -43,6 +43,7 @@ class SplashFragment : Fragment() {
             delay(1500)
             val bundle = Bundle()
             bundle.putParcelableArrayList("list", viewModel.data)
+            bundle.putString("date", viewModel.date)
             APP.navController.navigate(R.id.action_splashFragment_to_mainFragment, bundle)
         }
     }
